@@ -1,0 +1,41 @@
+@import "../../styles/abstracts/variables";
+
+.gallery-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  transform: translateX(0);
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+  }
+
+  &__prev-btn,
+  &__next-btn {
+    background-color: $color-white;
+    padding: 1.8rem;
+  }
+
+  &__prev-btn {
+    clip-path: circle(40% at 55% 50%);
+  }
+
+  &__next-btn {
+    clip-path: circle(40% at 50% 50%);
+  }
+
+  &__img-wrapper {
+    transform: translateY(-1.8rem);
+    z-index: -1;
+  }
+
+  &__img-el {
+    width: 100vw;
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../styles/abstracts/variables";
+
+.product-description {
+  &__label {
+    color: $color-orange;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1.85px;
+    margin-bottom: 1.9rem;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__copy {
+    color: $color-blue--dark-grayish;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}

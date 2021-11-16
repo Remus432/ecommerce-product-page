@@ -1,0 +1,22 @@
+.menu {
+  display: flex;
+
+  &__hamburger {
+    margin-right: 1.6rem;
+    width: 2rem;
+  }
+
+  &__logo {
+
+  }
+  
+  &__list {
+    display: none;
+  }
+
+  &__item {
+    &-link {
+
+    }
+  }
+}

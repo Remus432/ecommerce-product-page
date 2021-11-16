@@ -1,0 +1,17 @@
+@import "../../styles/abstracts/variables";
+
+.product-amount-counter {
+  align-items: center;
+  background-color: $color-blue--light-grayish;
+  border-radius: .8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  padding: 1.8rem 2rem;
+  width: 100%;
+
+  &__count {
+    color: $color-blue--very-dark;
+    font-weight: 700;
+  }
+}

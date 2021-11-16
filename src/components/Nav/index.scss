@@ -1,0 +1,15 @@
+@import "../../styles/abstracts/variables"; 
+
+.nav-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.9rem 2.4rem 2.2rem 2.4rem;
+}
+
+.nav {
+  background-color: $color-white;
+  border-bottom: 3px solid rgba($color-blue--grayish, .4);
+  position: relative;
+  z-index: 2;
+}
