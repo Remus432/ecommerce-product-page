@@ -1,10 +1,14 @@
 @import "../../styles/abstracts/variables"; 
+@import "../../styles/abstracts/mixins"; 
 
 .nav-wrapper {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
   padding: 1.9rem 2.4rem 2.2rem 2.4rem;
+
+  @include flexPos(space-between, center, row);
+
+  @include respond-desktop {
+   padding: 2.8rem 0 2rem 0;
+  }
 }
 
 .nav {
@@ -12,4 +16,8 @@
   border-bottom: 3px solid rgba($color-blue--grayish, .4);
   position: relative;
   z-index: 2;
+
+  @include respond-desktop {
+    border-bottom: 1px solid rgba($color-blue--grayish, .4);
+  }
 }

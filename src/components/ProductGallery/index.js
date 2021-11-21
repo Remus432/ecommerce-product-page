@@ -4,7 +4,7 @@ import GalleryThumbnails from "../GalleryThumbnails"
 import "./index.scss"
 
 const ProductGallery = () => {
-  const [ windowSize, setWindowSize ] = useState(0)
+  const [ windowSize, setWindowSize ] = useState(window.innerWidth)
   
   useEffect(() => {
     window.addEventListener("resize", e => {
@@ -14,7 +14,7 @@ const ProductGallery = () => {
   return (
     <div className="gallery">
       {
-        windowSize < 1440 ? <GallerySlider /> : <GalleryThumbnails />
+        windowSize < 1360 ? <GallerySlider /> : <GalleryThumbnails />
       }
     </div>
   )

@@ -4,12 +4,12 @@ import WhiteCartIcon from "../../images/icon-cart-white.svg"
 // Styling
 import "./index.scss"
 
-const Button = ({ type }) => {
+const Button = ({ addToCartClick, type }) => {
   return (
     <>
-      <button class="btn">{ type === "cart" ? (
+      <button onClick={() => addToCartClick()} className="btn">{ type === "cart" ? (
         <>
-          <img src={WhiteCartIcon} /> 
+          <img src={WhiteCartIcon} alt="White Cart Icon" /> 
           <span>Add to cart</span>
         </> 
         ) : "Checkout"}</button>

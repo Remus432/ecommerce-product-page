@@ -1,5 +1,8 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
 .menu {
-  display: flex;
+  @include flexPos(default, center, row);
 
   &__hamburger {
     margin-right: 1.6rem;
@@ -17,6 +20,37 @@
   &__item {
     &-link {
 
+    }
+  }
+
+  @include respond-desktop {
+    
+    &__hamburger {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      margin-left: 5.6rem;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 3.2rem;
+      }
+
+      &-link {
+        border-bottom: 4px solid transparent;
+        color: $color-blue--dark-grayish;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding-bottom: 3.2rem;
+
+        &:hover {
+          border-bottom: 4px solid $color-orange;
+          color: $color-blue--very-dark;
+        }
+      }
     }
   }
 }

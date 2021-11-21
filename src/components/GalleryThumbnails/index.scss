@@ -1,0 +1,73 @@
+@import "../../styles/abstracts/variables";
+
+.gallery {
+  &__main {
+    width: 44.5rem;
+
+    img {
+      border-radius: 1.5rem;
+      transition: .5s ease-in;
+    }
+  }
+
+  &__thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 8.8rem);
+    grid-gap: 3.2rem;
+    margin-top: 3.2rem;
+
+    img {
+      border-radius: 1rem;
+    }
+  }
+
+  &__thumbnail {
+    line-height: 0;
+    position: relative;
+
+    &::before {
+      transition: all .5s;
+    }
+
+    &:not(&.selected) img:hover {
+      transform: scale(1.1);
+    }
+
+    &.selected {
+      img {
+        opacity: .5;
+      }
+
+      &::before {
+        border-radius: 1rem;
+        content: "";
+        height: 100%;
+        left: 0;
+        outline: 3px solid $color-orange;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      } 
+    }
+
+    &:hover img {
+      opacity: .5;
+    }
+  }
+
+  img {
+    cursor: pointer;
+    transition: all .4s;
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

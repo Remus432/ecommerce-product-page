@@ -1,4 +1,22 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
 .cart-notif {
+  cursor: pointer;
   line-height: 0;
-  
+  position: relative;
+
+  &__amount {
+    background-color: $color-orange;
+    border-radius: 50%;
+    color: $color-white;
+    font-size: 1rem;
+    height: 1.4rem;
+    position: absolute;
+    top: -.6rem;
+    right: -.6rem;
+    width: 1.8rem;
+
+    @include flexCenter();
+  }
 }

@@ -1,0 +1,76 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.cart-modal {
+  background-color: $color-white;
+  bottom: -27rem;
+  border-radius: .6rem;
+  box-shadow: 0 2rem 5rem -2rem rgba($color-blue--very-dark, .5);
+  height: 25.6rem;
+  padding: 1rem 0rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 36rem;
+
+  &__label {
+    color: $color-blue--very-dark;
+    display: inline-block;
+    font-weight: 700;
+    padding: 1rem 0 1.5rem 2rem;
+  }
+
+  &__empty {
+    color: $color-blue--dark-grayish;
+    font-weight: 700;
+  }
+
+  &__products {
+    border-top: 2px solid $color-blue--light-grayish;
+    height: 60%;
+    
+    @include flexCenter();
+  }
+
+  &__checkout {
+    height: 100%;
+    margin-top: 4rem;
+    width: 90%;
+
+    @include flexPos(space-around, default, column);
+  }
+
+  &__product {
+    color: $color-blue--dark-grayish;
+    
+    @include flexPos(default, center, default); 
+
+    &-img {
+      border-radius: 4px;
+      margin-right: 1.6rem;
+      width: 5rem;
+    }
+
+    &-price {
+      margin-top: .8rem;
+    }
+
+    &-price-total {
+      color: $color-blue--very-dark;
+      font-weight: 700;
+      margin-left: .8rem;
+    }
+
+    &-del {
+      cursor: pointer;
+      margin-left: 1.6rem;
+    }
+  }
+
+  @include respond-desktop {
+    left: unset;
+    right: -8vw;
+    transform: translateX(0);
+    top: 6vw;
+  }
+}

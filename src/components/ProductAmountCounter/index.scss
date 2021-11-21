@@ -1,17 +1,33 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .product-amount-counter {
-  align-items: center;
   background-color: $color-blue--light-grayish;
   border-radius: .8rem;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 1.6rem;
   padding: 1.8rem 2rem;
   width: 100%;
 
+  @include flexPos(space-between, center, row);
+
   &__count {
     color: $color-blue--very-dark;
     font-weight: 700;
+  }
+
+  &__operation {
+    cursor: pointer;
+    
+    &:hover {
+      filter: opacity(60%);
+    }
+  }
+
+  @include respond-desktop {
+    & {
+      flex: 40%;
+      margin-bottom: 0;
+      margin-right: 1.6rem;
+    }
   }
 }

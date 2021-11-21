@@ -1,0 +1,18 @@
+@mixin respond-desktop {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin flexCenter {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexPos($x, $y, $dir) {
+  align-items: $y;
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $x; 
+}

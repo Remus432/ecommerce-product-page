@@ -1,14 +1,13 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .product-pricing {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
   margin-top: 2.4rem;
 
+  @include flexPos(space-between, center, row);
+
   &__new {
-    align-items: center;
-    display: flex;
+    @include flexPos(default, center, row);
   }
 
   &__price {
@@ -30,5 +29,15 @@
     color: $color-blue--grayish;
     font-weight: 700;
     text-decoration: line-through;
+  }
+
+  @include respond-desktop {
+    & {
+      @include flexPos(default, flex-start, column);
+
+      &__new {
+        margin-bottom: .8rem;
+      }
+    }
   }
 }

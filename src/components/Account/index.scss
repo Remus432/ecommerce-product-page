@@ -1,9 +1,25 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
 .account {
-  align-items: center;
-  display: flex;
+  @include flexPos(default, center, row);
 
   &__pic {
+    border-radius: 50%;
+    cursor: pointer;
     margin-left: 2.2rem;
     width: 3rem;
+
+    &:hover {
+      outline: 2px solid $color-orange;
+    }
+  }
+
+  @include respond-desktop {
+    & {
+      &__pic {
+        width: 5rem;
+      }
+    }
   }
 }

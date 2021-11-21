@@ -1,4 +1,5 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .gallery-slider {
   display: flex;
@@ -7,13 +8,13 @@
   transform: translateX(0);
 
   &__controls {
-    display: flex;
-    justify-content: space-between;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 95%;
+
+    @include flexPos(space-between, default, row);
   }
 
   &__prev-btn,

@@ -1,6 +1,9 @@
 import React from 'react'
+// Children Components
 import Menu from "../Menu"
 import Account from "../Account"
+import CartModal from "../CartModal"
+// Styling
 import "./index.scss";
 
 const Nav = () => {
@@ -10,6 +13,7 @@ const Nav = () => {
         <Menu />
         <Account />
       </div>
+      <CartModal />
     </nav>
   )
 }

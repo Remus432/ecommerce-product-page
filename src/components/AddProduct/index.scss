@@ -1,3 +1,15 @@
+@import "../../styles/abstracts/mixins";
+
 .add-product {
   margin-top: 2.4rem;
+
+  @include respond-desktop {
+    & {
+      @include flexCenter();
+      
+      .btn {
+        flex: 60%;
+      }
+    }
+  }
 }

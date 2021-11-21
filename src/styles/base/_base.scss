@@ -18,3 +18,8 @@ a {
   text-decoration: none;
 }
 
+body {
+  @include respond-desktop {
+    padding: 0 16.5rem;
+  }
+}
