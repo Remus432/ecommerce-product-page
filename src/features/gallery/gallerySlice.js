@@ -29,5 +29,6 @@ export const gallerySlice = createSlice({
 export const { toggleGalleryModal, changeCurrImg } = gallerySlice.actions
 
 export const selectCurrentImg = (state) => state.gallery.imgsArr[state.gallery.currentImg]
+export const selectIsGalleryModalOpen = (state) => state.gallery.isGalleryModalOpen
 
 export default gallerySlice.reducer

@@ -5,7 +5,7 @@
 
   @include respond-desktop {
     & {
-      @include flexCenter();
+      @include flexCenter(row);
       
       .btn {
         flex: 60%;

@@ -8,9 +8,9 @@ import ThumbnailFour from "../../images/image-product-4-thumbnail.jpg"
 import "./index.scss"
 // Redux
 import { useDispatch, useSelector } from "react-redux"
-import { changeCurrImg, selectCurrentImg } from "../../features/gallery/gallerySlice"
+import { changeCurrImg, selectCurrentImg, toggleGalleryModal } from "../../features/gallery/gallerySlice"
 
-const GalleryThumbnails = () => {
+const GalleryThumbnails = ({ type }) => {
   const dispatch = useDispatch()
   const currentImg = useSelector(selectCurrentImg)
 
@@ -24,10 +24,14 @@ const GalleryThumbnails = () => {
     }
   }
 
+  const toggleLightboxModal = () => {
+    dispatch(toggleGalleryModal())
+  }
+
   return (
-    <div>
+    <>
       <div className="gallery__main">
-        <img src={currentImg} alt="Main Product" />
+        <img onClick={() => toggleLightboxModal()} src={currentImg} alt="Main Product" />
       </div>
       <div onClick={e => selectImg(e)} className="gallery__thumbnails">
         <div id="1" className="gallery__thumbnail selected">
@@ -43,7 +47,7 @@ const GalleryThumbnails = () => {
           <img className="gallery__thumbnail-img" src={ThumbnailFour} alt="Product Thumbnail" />
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

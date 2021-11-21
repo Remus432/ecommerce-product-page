@@ -11,7 +11,7 @@
   padding: 1.8rem;
   width: 100%;
 
-  @include flexCenter();
+  @include flexCenter(row);
 
   & img {
     width: 16px;

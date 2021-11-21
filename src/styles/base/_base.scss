@@ -20,6 +20,23 @@ a {
 
 body {
   @include respond-desktop {
+    overflow: hidden;
     padding: 0 16.5rem;
+  }
+}
+
+.menu-open {
+  overflow: hidden;
+  height: 100vh;
+
+  &::before {
+    background-color: rgba($color-blue--very-dark, .8);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
   }
 }

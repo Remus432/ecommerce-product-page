@@ -1,26 +1,32 @@
 @import "../../styles/abstracts/variables";
 @import "../../styles/abstracts/mixins";
 
+.gallery-slider-wrapper {
+  overflow: hidden;
+}
+
 .gallery-slider {
   display: flex;
-  overflow: hidden;
-  position: relative;
-  transform: translateX(0);
+  width: 400vw;
+  transform: translateX(0%);
+  height: auto;
 
   &__controls {
     left: 50%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
-    width: 95%;
+    width: 90%;
+    z-index: 1;
 
-    @include flexPos(space-between, default, row);
+    @include flexPos(space-between, center, row);
   }
 
   &__prev-btn,
   &__next-btn {
     background-color: $color-white;
     padding: 1.8rem;
+    width: 5rem!important;
   }
 
   &__prev-btn {
@@ -33,10 +39,7 @@
 
   &__img-wrapper {
     transform: translateY(-1.8rem);
+    
     z-index: -1;
-  }
-
-  &__img-el {
-    width: 100vw;
   }
 }

@@ -2,8 +2,7 @@
 
 .gallery {
   &__main {
-    width: 44.5rem;
-
+   
     img {
       border-radius: 1.5rem;
       transition: .5s ease-in;
@@ -14,7 +13,9 @@
     display: grid;
     grid-template-columns: repeat(4, 8.8rem);
     grid-gap: 3.2rem;
-    margin-top: 3.2rem;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 100%;
 
     img {
       border-radius: 1rem;

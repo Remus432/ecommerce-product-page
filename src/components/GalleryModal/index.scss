@@ -1,0 +1,61 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+@import "../../styles/base/keyframes";
+
+.gallery-modal {
+  animation: fadeInDown .4s forwards ease-in;
+  height: 100%;
+  z-index: 3;
+
+  @include absCenter();
+  @include flexCenter(column);
+
+  &::before {
+    background-color: rgba($color-blue--very-dark, .8);
+    content: "";
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -104.8%;
+    width: 100vw;
+    z-index: -1;
+  }
+
+  &__close {
+    cursor: pointer;
+    align-self: flex-end;
+
+    &:hover {
+      filter: invert(73%) sepia(81%) saturate(4321%) hue-rotate(346deg) brightness(101%) contrast(101%);
+    }
+  }
+
+ & .gallery__main {
+   width: 45rem;
+
+   & img {
+     width: 100%;
+   }
+ }
+
+ & .gallery__thumbnails {
+   width: 100%;
+
+   @include flexCenter(row);
+ }
+
+ & .gallery__thumbnail {
+   width: 10rem;
+
+   & img {
+     width: 100%;
+   }
+
+   &.selected {
+     img {
+       opacity: 1;
+       filter: grayscale(50%) brightness(120%);
+     }
+   }
+ }
+}

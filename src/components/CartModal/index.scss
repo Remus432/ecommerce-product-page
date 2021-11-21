@@ -29,7 +29,7 @@
     border-top: 2px solid $color-blue--light-grayish;
     height: 60%;
     
-    @include flexCenter();
+    @include flexCenter(row);
   }
 
   &__checkout {

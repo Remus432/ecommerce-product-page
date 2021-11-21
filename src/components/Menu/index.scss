@@ -14,12 +14,28 @@
   }
   
   &__list {
-    display: none;
+    background-color: $color-white;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    padding: 2rem;
+    padding-top: 3rem;
+    top: 0;
+    width: 65vw;
+    z-index: 3;
+  }
+
+  &__close {
+    filter: invert(44%) sepia(8%) saturate(672%) hue-rotate(181deg) brightness(97%) contrast(88%);
   }
 
   &__item {
-    &-link {
+    margin-top: 3rem;
 
+    &-link {
+      color: $color-blue--very-dark;
+      font-size: 1.8rem;
+      font-weight: bold;
     }
   }
 
@@ -32,6 +48,11 @@
     &__list {
       display: flex;
       margin-left: 5.6rem;
+      position: unset;
+    }
+
+    &__close {
+      display: none;
     }
 
     &__item {
