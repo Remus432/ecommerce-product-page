@@ -1,6 +1,5 @@
 import React from 'react'
 // Images
-import MainImg from "../../images/image-product-1.jpg"
 import ThumbnailOne from "../../images/image-product-1-thumbnail.jpg"
 import ThumbnailTwo from "../../images/image-product-2-thumbnail.jpg"
 import ThumbnailThree from "../../images/image-product-3-thumbnail.jpg"
