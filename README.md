@@ -1,4 +1,4 @@
-# Frontend Mentor - Fullstack Todo App (MEVN)
+# Frontend Mentor - E-commerce Product Page (React+Redux)
 
 ![Design preview for the Todo app
  coding challenge](./design/desktop-preview.jpg)
