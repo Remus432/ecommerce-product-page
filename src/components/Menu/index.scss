@@ -11,7 +11,12 @@
 
   
   &__list {
+    display: none;
+  }
+
+  &__list.menu-mobile {
     background-color: $color-white;
+    display: inline-block;
     height: 100%;
     left: 0;
     position: fixed;
@@ -20,6 +25,10 @@
     top: 0;
     width: 65vw;
     z-index: 3;
+
+    & li {
+      margin-top: 3rem;
+    }
   }
 
   &__close {
@@ -27,8 +36,6 @@
   }
 
   &__item {
-    margin-top: 3rem;
-
     &-link {
       color: $color-blue--very-dark;
       font-size: 1.8rem;
