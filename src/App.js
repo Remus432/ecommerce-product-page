@@ -13,11 +13,11 @@ function App() {
   const isMenuOpen = useSelector(selectIsMenuOpen)
 
   return (
-    <div className={isMenuOpen && "menu-open"}>
+    <main className={isMenuOpen && "menu-open"}>
       <GalleryModal />
       <Nav />
       <Product />
-    </div>
+    </main>
   );
 }
 
