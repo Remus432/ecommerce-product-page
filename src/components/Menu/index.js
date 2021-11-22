@@ -27,7 +27,9 @@ const Menu = () => {
       <img onClick={() => openMenu()} src={HamburgerMenuIcon} alt="Hamburger Menu" className="menu__hamburger" />
       <img className="menu__logo" alt="Sneakers Logo" src={Logo} />
         <ul className={`menu__list ${isMenuOpen ? "menu-mobile" : ""}`}>
-          <img onClick={() => closeMenu()} className="menu__close" src={MenuCloseIcon} alt="Menu Close Icon" />
+          <li>
+            <img onClick={() => closeMenu()} className="menu__close" src={MenuCloseIcon} alt="Menu Close Icon" />
+          </li>
           <li className="menu__item">
             <a href="#2" className="menu__item-link">Collections</a>
           </li>
